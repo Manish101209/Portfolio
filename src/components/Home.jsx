@@ -7,6 +7,8 @@ import { FaLinkedin } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io";
 import { FaTelegram } from "react-icons/fa6";
 
+import { FaGithubSquare, FaInstagramSquare, FaSquare } from "react-icons/fa";
+
 import { SiMongodb } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
@@ -23,13 +25,13 @@ function Home() {
       >
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/2 mt-12 md:mt-24 space-y-2 order-2 md:order-1">
-            <span className="text-xl">Welcome In My Feed</span>
+            <span className="text-xl"></span>
             <div className="flex space-x-1 text-2xl md:text-4xl">
               <h1>Hello, I'm a</h1>
               {/* <span >Developer</span> */}
               <ReactTyped
                 className="text-red-700 font-bold"
-                strings={["Developer", "Programmer", "Coder"]}
+                strings={["Developer", "Programmer", "Coder", "MERN Engineer"]}
                 typeSpeed={40}
                 backSpeed={50}
                 loop={true}
@@ -37,11 +39,10 @@ function Home() {
             </div>
             <br />
             <p className="text-sm md:text-md text-justify">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Quisquam, recusandae consequatur. Accusamus sint libero eligendi
-              laborum fuga repudiandae? Asperiores tempore eos animi dolores
-              corrupti! Sint quos, mollitia architecto aliquam nesciunt, optio
-              cum delectus sit voluptatum aut ratione quaerat veniam aperiam!
+              As a Full Stack Developer proficient in the MERN stack, my
+              objective is to collaborate with forward-thinking teams to build
+              dynamic web applications, leveraging my expertise in frontend and
+              backend development to deliver seamless digital experiences.
             </p>
             <br />
             {/* social media icons */}
@@ -50,8 +51,11 @@ function Home() {
                 <h1 className="font-bold text-center ">Available on</h1>
                 <ul className="flex space-x-5">
                   <li>
-                    <a href="https://www.facebook.com/" target="_blank">
-                      <FaSquareFacebook className="text-2xl cursor-pointer" />
+                    <a
+                      href="https://www.instagram.com/manish_raj10/"
+                      target="_blank"
+                    >
+                      <FaInstagramSquare className="text-2xl cursor-pointer" />
                     </a>
                   </li>
                   <li>
@@ -60,8 +64,11 @@ function Home() {
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.youtube.com/" target="_blank">
-                      <IoLogoYoutube className="text-2xl cursor-pointer" />
+                    <a
+                      href="https://github.com/Manish101209?tab=repositories"
+                      target="_blank"
+                    >
+                      <FaGithubSquare className="text-2xl cursor-pointer" />
                     </a>
                   </li>
                   <li>
@@ -85,7 +92,7 @@ function Home() {
           <div className="md:w-1/2 md:ml-48 md:mt-20 mt-8 order-1">
             <img
               src={pic}
-              className="rounded-full md:w-[450px] md:h-[450px]"
+              className="rounded-full md:w-[450px] md:h-[450px] border-4 border-gray-300 shadow-lg transform transition-transform duration-300 hover:scale-105 hover:border-indigo-500 hover:animate-wiggle hover:animate-motion"
               alt=""
             />
           </div>
