@@ -1,7 +1,8 @@
 import React from "react";
 import java from "../../public/java.png";
 import python from "../../public/python.webp";
-import mongoDB from "../../public/mongodb.jpg";
+// import mongoDB from "../../public/mongodb.jpg";
+import service from "../../public/service.png";
 import express from "../../public/express.png";
 import reactjs from "../../public/reactjs.png";
 import nodejs from "../../public/node.png";
@@ -10,16 +11,17 @@ function PortFolio() {
   const cardItem = [
     {
       id: 1,
-      logo: mongoDB,
-      name: "MongoDB",
-      description: "A NoSQL database for modern applications.",
+      logo: service,
+      name: "IT Service Web App",
+      description:
+        "A React, Express, and Node.js-based website offering IT service solutions. Developed a user-friendly platform to address common IT problems, enhancing user experience and operational efficiency.",
     },
     {
       id: 2,
       logo: express,
-      name: "Express",
+      name: "MERN Stack Online Bookstore",
       description:
-        "A fast, unopinionated, minimalist web framework for Node.js.",
+        "Built a dynamic & responsive online bookstore using MERN stack (MongoDB, Express.js, React.js, Node.js).",
     },
     {
       id: 3,
@@ -66,20 +68,36 @@ function PortFolio() {
             >
               <img
                 src={logo}
-                className="w-full h-64 object-cover group-hover:opacity-80 transition-opacity duration-300"
+                className="w-full h-64 object-cover transition-opacity duration-300"
                 alt={name}
+                style={{ filter: id === 1 ? "blur(2px)" : "none" }}
               />
-              <div className="absolute inset-0 flex flex-col justify-end p-4 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="text-white font-bold text-xl mb-1">{name}</div>
-                <div className="text-white mb-2">{description}</div>
-                <div className="flex justify-center space-x-3 mt-4">
-                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded">
-                    Video
-                  </button>
-                  <button className="bg-green-500 hover:bg-green-700 text-white font-bold px-4 py-2 rounded">
-                    Source Code
-                  </button>
+              {(id === 1 || id === 2) && (
+                <div className="absolute inset-0 flex flex-col justify-center items-center p-4 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="text-white font-bold text-xl mb-1">
+                    {name}
+                  </div>
+                  <div className="flex justify-center space-x-3 mt-4">
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded">
+                      Video
+                    </button>
+                    <button
+                      className="bg-green-500 hover:bg-green-700 text-white font-bold px-4 py-2 rounded"
+                      onClick={() =>
+                        (window.location.href =
+                          id === 1
+                            ? "https://manish101209.github.io/Service_Provide_projects/"
+                            : "https://github.com/Manish101209/Bookstore-webApp.git")
+                      }
+                    >
+                      Source Code
+                    </button>
+                  </div>
                 </div>
+              )}
+              <div className="p-4">
+                <div className="font-bold text-xl mb-2">{name}</div>
+                <p className="text-gray-700 text-base">{description}</p>
               </div>
             </div>
           ))}

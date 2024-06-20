@@ -7,7 +7,7 @@ import node from "../../public/node.png";
 import mongodb from "../../public/mongodb.jpg";
 import reactjs from "../../public/reactjs.png";
 
-function Experiance() {
+function Experience() {
   const cardItem = [
     { id: 1, logo: html, name: "HTML" },
     { id: 2, logo: css, name: "CSS" },
@@ -20,26 +20,26 @@ function Experiance() {
 
   return (
     <div
-      name="Experiance"
+      name="Experience"
       className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-16"
     >
       <div>
-        <h1 className="text-3xl font-bold mb-5">Experiance</h1>
+        <h1 className="text-3xl font-bold mb-5">Experience</h1>
         <p className="mb-8">
           I've more than 1 year of experience in the following technologies:
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-7">
           {cardItem.map(({ id, logo, name }) => (
             <div
-              className="flex flex-col items-center justify-center border-2 rounded-xl md:w-48 md:h-48 shadow-lg p-4 cursor-pointer hover:scale-110 transition-transform duration-300 hover:border-pink-500 hover:shadow-pink-500/50"
+              className="flex flex-col items-center justify-center border-2 rounded-xl md:w-48 md:h-48 shadow-lg p-4 cursor-pointer hover:scale-110 transition-transform duration-300 hover:border-indigo-500 hover:shadow-indigo-500/50"
               key={id}
             >
               <img
                 src={logo}
-                className="w-24 h-24 rounded-full mb-3"
+                className="w-24 h-24 rounded-full mb-3 object-cover"
                 alt={name}
               />
-              <div className="font-bold text-lg text-center text-white glow">
+              <div className="font-bold text-lg text-center text-gray-900">
                 {name}
               </div>
             </div>
@@ -50,4 +50,4 @@ function Experiance() {
   );
 }
 
-export default Experiance;
+export default Experience;
